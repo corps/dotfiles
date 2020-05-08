@@ -2,6 +2,13 @@
     link:
       relink: true
 
+- create:
+    - ~/.vim/undo-history
+    - ~/.config
+    - ~/.config/nvim
+    - ~/.local
+    - ~/.local/share
+
 - clean:
     ~/:
       force: true
@@ -10,11 +17,10 @@
 
 - link:
     ~/.vim: vim
+    ~/.local/share/nvim: vim
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
-
-- create:
-    - ~/.vim/undo-history
+    ~/.config/nvim/init.vim: vimrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
