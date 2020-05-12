@@ -14,12 +14,15 @@ map <space><space> <leader><leader>
 tnoremap <Esc> <C-\><C-n>
 
 call plug#begin('~/.vim/plugged')
+Plug 'haya14busa/incsearch.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
+Plug 'nathangrigg/vim-beancount'
+Plug 'Shougo/deoplete.nvim'
 call plug#end()
 
 filetype plugin on
@@ -80,3 +83,6 @@ autocmd FileType make setlocal noexpandtab
 
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#complete_method = "omnifunc"

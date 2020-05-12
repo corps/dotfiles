@@ -8,6 +8,7 @@
     - ~/.config/nvim
     - ~/.local
     - ~/.local/share
+    - ~/bin
 
 - clean:
     ~/:
@@ -21,6 +22,8 @@
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
     ~/.config/nvim/init.vim: vimrc
+    ~/bin/update-accounting-csvs: ~/accounting/csvs/update-csvs.sh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [python3 -m pip install --user --upgrade pynvim]
