@@ -16,6 +16,11 @@
     ~/.config:
       recursive: true
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [python3 -m pip install --user --upgrade pynvim]
+  - [bin/bundle-clone.sh accounting]
+
 - link:
     ~/.vim: vim
     ~/.local/share/nvim: vim
@@ -23,7 +28,3 @@
     ~/.vimrc: vimrc
     ~/.config/nvim/init.vim: vimrc
     ~/bin/update-accounting-csvs: ~/accounting/csvs/update-csvs.sh
-
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - [python3 -m pip install --user --upgrade pynvim]

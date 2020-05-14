@@ -7,4 +7,4 @@ if [ -e $HOME/$1 ]; then
 fi
 
 cd $HOME
-git clone $DROPBOX_HOME/git/$1.git
+git clone $DROPBOX_HOME/git/$1.git $1
