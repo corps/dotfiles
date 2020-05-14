@@ -8,3 +8,6 @@ fi
 
 cd $HOME
 git clone $DROPBOX_HOME/git/$1.git $1
+cd $1
+git remote add -f dropbox "$DROPBOX_HOME/git/$1.git"
+git remote rm origin
